@@ -1,0 +1,6 @@
+cd /path/to/your/folder
+git init
+git add .
+git commit -m "Add folder to main branch"
+git remote add origin <repository-url>
+git push -u origin main

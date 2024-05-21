@@ -1,0 +1,79 @@
+2024-05-19T12:07:22.757+05:30  INFO 3076 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : Starting TourroadmapApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 3076 (C:\BackendProjects\tourroadmap\tourroadmap\build\libs\tourroadmap-0.0.1-SNAPSHOT.jar started by chinm in C:\BackendProjects\tourroadmap\tourroadmap)
+2024-05-19T12:07:22.772+05:30  INFO 3076 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : The following 1 profile is active: "config"
+2024-05-19T12:07:24.281+05:30  INFO 3076 --- [tourroadmap] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2024-05-19T12:07:24.306+05:30  INFO 3076 --- [tourroadmap] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-19T12:07:24.308+05:30  INFO 3076 --- [tourroadmap] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-19T12:07:24.396+05:30  INFO 3076 --- [tourroadmap] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-19T12:07:24.396+05:30  INFO 3076 --- [tourroadmap] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1455 ms
+2024-05-19T12:07:24.558+05:30  INFO 3076 --- [tourroadmap] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.tourroadmap.tourroadmap.Connection.DBConnection.getConnection()
+2024-05-19T12:07:24.978+05:30  INFO 3076 --- [tourroadmap] [main] c.t.tourroadmap.Connection.DBConnection  : Connected to PostgreSQL database username :postgres ==>> checked by connection service
+2024-05-19T12:07:25.567+05:30  INFO 3076 --- [tourroadmap] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path ''
+2024-05-19T12:07:25.583+05:30  INFO 3076 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : Started TourroadmapApplication in 3.604 seconds (process running for 4.217)
+2024-05-19T12:08:00.796+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-19T12:08:00.797+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-19T12:08:00.800+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-05-19T12:08:00.936+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-2] c.t.tourroadmap.Controller.GetEndpoints  : Respond ok!!Rairangpur
+2024-05-19T12:08:01.088+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-2] c.t.tourroadmap.DBservice.DbService      : Connextion ok
+2024-05-19T12:08:01.092+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-2] c.t.tourroadmap.DBservice.DbService      : [com.tourroadmap.tourroadmap.POJO.PlaceEntity@53980b20]
+2024-05-19T12:08:43.939+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-5] c.t.tourroadmap.Controller.GetEndpoints  : Respond ok!!Basilica of Bom Jesus
+2024-05-19T12:08:43.942+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-5] c.t.tourroadmap.DBservice.DbService      : Connextion ok
+2024-05-19T12:08:43.946+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-5] c.t.tourroadmap.DBservice.DbService      : [com.tourroadmap.tourroadmap.POJO.PlaceEntity@7e9364c0]
+2024-05-19T12:08:57.624+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-9] c.t.tourroadmap.Controller.GetEndpoints  : Respond ok!!Rairangpur
+2024-05-19T12:08:57.627+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-9] c.t.tourroadmap.DBservice.DbService      : Connextion ok
+2024-05-19T12:08:57.630+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-9] c.t.tourroadmap.DBservice.DbService      : [com.tourroadmap.tourroadmap.POJO.PlaceEntity@22f79d65]
+2024-05-19T12:10:34.816+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-10] c.t.tourroadmap.Controller.GetEndpoints  : Respond ok!!Rairangpur
+2024-05-19T12:10:34.819+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-10] c.t.tourroadmap.DBservice.DbService      : Connextion ok
+2024-05-19T12:10:34.822+05:30  INFO 3076 --- [tourroadmap] [http-nio-3030-exec-10] c.t.tourroadmap.DBservice.DbService      : [com.tourroadmap.tourroadmap.POJO.PlaceEntity@25f81d4d]
+2024-05-19T12:10:47.474+05:30  INFO 18468 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : Starting TourroadmapApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 18468 (C:\BackendProjects\tourroadmap\tourroadmap\build\libs\tourroadmap-0.0.1-SNAPSHOT.jar started by chinm in C:\BackendProjects\tourroadmap\tourroadmap)
+2024-05-19T12:10:47.477+05:30  INFO 18468 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : The following 1 profile is active: "config"
+2024-05-19T12:10:49.405+05:30  INFO 18468 --- [tourroadmap] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2024-05-19T12:10:49.426+05:30  INFO 18468 --- [tourroadmap] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-19T12:10:49.427+05:30  INFO 18468 --- [tourroadmap] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-19T12:10:49.480+05:30  INFO 18468 --- [tourroadmap] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-19T12:10:49.481+05:30  INFO 18468 --- [tourroadmap] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1677 ms
+2024-05-19T12:10:49.589+05:30  INFO 18468 --- [tourroadmap] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.tourroadmap.tourroadmap.Connection.DBConnection.getConnection()
+2024-05-19T12:10:49.822+05:30  INFO 18468 --- [tourroadmap] [main] c.t.tourroadmap.Connection.DBConnection  : Connected to PostgreSQL database username :postgres ==>> checked by connection service
+2024-05-19T12:10:50.486+05:30  INFO 18468 --- [tourroadmap] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path ''
+2024-05-19T12:10:50.496+05:30  INFO 18468 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : Started TourroadmapApplication in 3.73 seconds (process running for 4.468)
+2024-05-19T12:10:54.348+05:30  INFO 18468 --- [tourroadmap] [http-nio-3030-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-19T12:10:54.352+05:30  INFO 18468 --- [tourroadmap] [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-19T12:10:54.358+05:30  INFO 18468 --- [tourroadmap] [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-05-19T12:10:54.445+05:30  INFO 18468 --- [tourroadmap] [http-nio-3030-exec-1] c.t.tourroadmap.Controller.GetEndpoints  : Respond ok!!Rairangpur
+2024-05-19T12:10:54.461+05:30  INFO 18468 --- [tourroadmap] [http-nio-3030-exec-1] c.t.tourroadmap.DBservice.DbService      : Connextion ok
+2024-05-19T12:10:54.462+05:30  INFO 18468 --- [tourroadmap] [http-nio-3030-exec-1] c.t.tourroadmap.DBservice.DbService      : org.postgresql.jdbc.PgResultSet@6628df89
+2024-05-19T12:11:50.522+05:30  INFO 13808 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : Starting TourroadmapApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 13808 (C:\BackendProjects\tourroadmap\tourroadmap\build\libs\tourroadmap-0.0.1-SNAPSHOT.jar started by chinm in C:\BackendProjects\tourroadmap\tourroadmap)
+2024-05-19T12:11:50.525+05:30  INFO 13808 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : The following 1 profile is active: "config"
+2024-05-19T12:11:52.033+05:30  INFO 13808 --- [tourroadmap] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2024-05-19T12:11:52.050+05:30  INFO 13808 --- [tourroadmap] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-19T12:11:52.050+05:30  INFO 13808 --- [tourroadmap] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-19T12:11:52.133+05:30  INFO 13808 --- [tourroadmap] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-19T12:11:52.134+05:30  INFO 13808 --- [tourroadmap] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1489 ms
+2024-05-19T12:11:52.216+05:30  INFO 13808 --- [tourroadmap] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.tourroadmap.tourroadmap.Connection.DBConnection.getConnection()
+2024-05-19T12:11:52.467+05:30  INFO 13808 --- [tourroadmap] [main] c.t.tourroadmap.Connection.DBConnection  : Connected to PostgreSQL database username :postgres ==>> checked by connection service
+2024-05-19T12:11:53.128+05:30  INFO 13808 --- [tourroadmap] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path ''
+2024-05-19T12:11:53.140+05:30  INFO 13808 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : Started TourroadmapApplication in 3.255 seconds (process running for 3.785)
+2024-05-19T12:11:55.768+05:30  INFO 13808 --- [tourroadmap] [http-nio-3030-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-19T12:11:55.769+05:30  INFO 13808 --- [tourroadmap] [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-19T12:11:55.771+05:30  INFO 13808 --- [tourroadmap] [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-05-19T12:11:55.886+05:30  INFO 13808 --- [tourroadmap] [http-nio-3030-exec-1] c.t.tourroadmap.Controller.GetEndpoints  : Respond ok!!Rairangpur
+2024-05-19T12:11:55.945+05:30  INFO 13808 --- [tourroadmap] [http-nio-3030-exec-1] c.t.tourroadmap.DBservice.DbService      : Connextion ok
+2024-05-19T12:11:55.949+05:30  INFO 13808 --- [tourroadmap] [http-nio-3030-exec-1] c.t.tourroadmap.DBservice.DbService      : [com.tourroadmap.tourroadmap.POJO.PlaceEntity@6628df89]
+2024-05-19T12:12:39.530+05:30  INFO 13808 --- [tourroadmap] [http-nio-3030-exec-3] c.t.tourroadmap.Controller.GetEndpoints  : Respond ok!!Hundru Falls
+2024-05-19T12:12:39.535+05:30  INFO 13808 --- [tourroadmap] [http-nio-3030-exec-3] c.t.tourroadmap.DBservice.DbService      : Connextion ok
+2024-05-19T12:12:39.536+05:30  INFO 13808 --- [tourroadmap] [http-nio-3030-exec-3] c.t.tourroadmap.DBservice.DbService      : [com.tourroadmap.tourroadmap.POJO.PlaceEntity@384839d5]
+2024-05-19T12:15:18.063+05:30  INFO 2820 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : Starting TourroadmapApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 2820 (C:\BackendProjects\tourroadmap\tourroadmap\build\libs\tourroadmap-0.0.1-SNAPSHOT.jar started by chinm in C:\BackendProjects\tourroadmap\tourroadmap)
+2024-05-19T12:15:18.067+05:30  INFO 2820 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : The following 1 profile is active: "config"
+2024-05-19T12:15:19.652+05:30  INFO 2820 --- [tourroadmap] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2024-05-19T12:15:19.666+05:30  INFO 2820 --- [tourroadmap] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-19T12:15:19.666+05:30  INFO 2820 --- [tourroadmap] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-19T12:15:19.701+05:30  INFO 2820 --- [tourroadmap] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-19T12:15:19.702+05:30  INFO 2820 --- [tourroadmap] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1484 ms
+2024-05-19T12:15:19.779+05:30  INFO 2820 --- [tourroadmap] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.tourroadmap.tourroadmap.Connection.DBConnection.getConnection()
+2024-05-19T12:15:19.996+05:30  INFO 2820 --- [tourroadmap] [main] c.t.tourroadmap.Connection.DBConnection  : Connected to PostgreSQL database username :postgres ==>> checked by connection service
+2024-05-19T12:15:20.597+05:30  INFO 2820 --- [tourroadmap] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path ''
+2024-05-19T12:15:20.611+05:30  INFO 2820 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : Started TourroadmapApplication in 3.332 seconds (process running for 3.932)
+2024-05-19T12:15:40.384+05:30  INFO 2820 --- [tourroadmap] [http-nio-3030-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-19T12:15:40.387+05:30  INFO 2820 --- [tourroadmap] [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-19T12:15:40.395+05:30  INFO 2820 --- [tourroadmap] [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-05-19T12:15:40.475+05:30  INFO 2820 --- [tourroadmap] [http-nio-3030-exec-1] c.t.tourroadmap.Controller.GetEndpoints  : Respond ok!!Hundru Falls
+2024-05-19T12:15:40.508+05:30  INFO 2820 --- [tourroadmap] [http-nio-3030-exec-1] c.t.tourroadmap.DBservice.DbService      : Connextion ok
