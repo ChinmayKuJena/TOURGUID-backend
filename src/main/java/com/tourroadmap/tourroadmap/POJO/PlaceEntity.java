@@ -8,10 +8,10 @@ public class PlaceEntity {
     private String state;
 
     public PlaceEntity(String placeid, String stateid, String placename, String placedetails, String state) {
+        this.placeid = placeid;
         this.stateid = stateid;
         this.placename = placename;
         this.placedetails = placedetails;
-        this.placeid = placeid;
         this.state = state;
     }
 

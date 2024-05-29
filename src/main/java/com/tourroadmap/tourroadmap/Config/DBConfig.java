@@ -24,6 +24,7 @@ public class DBConfig {
 
     @Value("${spring.datasource.password}")
     private String dbPassword;
+
     public static String DB_URL;
     public static String DB_USERNAME;
     public static String DB_PASSWORD;

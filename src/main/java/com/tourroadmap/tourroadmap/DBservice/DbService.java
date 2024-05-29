@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.tourroadmap.tourroadmap.Connection.DBConnection;
+import com.tourroadmap.tourroadmap.KafkaService.KafkaProducerService;
 import com.tourroadmap.tourroadmap.POJO.PlaceEntity;
 
 @Component
@@ -20,6 +21,8 @@ public class DbService {
     private static final org.slf4j.Logger log = LoggerFactory.getLogger(DbService.class);
     @Autowired
     private DbQuery dbQuery;
+    @Autowired
+    private KafkaProducerService kafkaProducerService;
 
     public ArrayList<PlaceEntity> placeService(String placeName) {
         ArrayList<PlaceEntity> placeList = new ArrayList<>();
@@ -53,6 +56,8 @@ public class DbService {
                         rs.getString("placedetails"),
                         rs.getString("state")));
                 // log.info(rs.toString());
+                kafkaProducerService.placeSearchData(rs, uuid);
+
             } catch (Exception e) {
                 log.error("error", e);
             }
