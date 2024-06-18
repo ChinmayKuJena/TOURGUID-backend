@@ -6,7 +6,7 @@ build/
 !**/src/test/**/build/
 
 # Ignore all log files with a specific pattern
-tourroadmap/mylog.log.*.gz
+tourroadmap/mylog.log.
 
 
 ### STS ###
