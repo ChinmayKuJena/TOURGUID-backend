@@ -34,7 +34,11 @@ public class DbService {
                 log.info("Connection null");
 
             }
-            placedetails(rs, placeList, UUID.randomUUID().toString());
+            UUID uuid = UUID.randomUUID();
+            String PREFIX = "TRV_EXP_SR_ID";
+            String searchId = PREFIX + "-" + uuid.toString();
+            // placedetails(rs, placeList, UUID.randomUUID().toString());
+            placedetails(rs, placeList, searchId);
             // log.info(placeList.toString());
             return placeList;
         } catch (SQLException ex) {
@@ -56,6 +60,7 @@ public class DbService {
                         rs.getString("placedetails"),
                         rs.getString("state")));
                 // log.info(rs.toString());
+                // uuid
                 kafkaProducerService.placeSearchData(rs, uuid);
 
             } catch (Exception e) {
