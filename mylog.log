@@ -126,3 +126,111 @@
 2024-06-18T09:04:51.714+05:30  INFO 19516 --- [tourroadmap] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
 2024-06-18T09:04:51.721+05:30  INFO 19516 --- [tourroadmap] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
 2024-06-18T09:04:51.731+05:30  INFO 19516 --- [tourroadmap] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2024-06-18T09:17:41.425+05:30  INFO 21732 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : Starting TourroadmapApplication v0.0.1-SNAPSHOT using Java 19.0.2 with PID 21732 (C:\BackendProjects\tourroadmap\tourroadmap\build\libs\tourroadmap-0.0.1-SNAPSHOT.jar started by chinm in C:\BackendProjects\tourroadmap\tourroadmap)
+2024-06-18T09:17:41.431+05:30  INFO 21732 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : The following 1 profile is active: "config"
+2024-06-18T09:17:43.761+05:30  INFO 21732 --- [tourroadmap] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2024-06-18T09:17:43.781+05:30  INFO 21732 --- [tourroadmap] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-18T09:17:43.782+05:30  INFO 21732 --- [tourroadmap] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-18T09:17:43.845+05:30  INFO 21732 --- [tourroadmap] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-18T09:17:43.846+05:30  INFO 21732 --- [tourroadmap] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2292 ms
+2024-06-18T09:17:43.988+05:30  INFO 21732 --- [tourroadmap] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.tourroadmap.tourroadmap.Connection.DBConnection.getConnection()
+2024-06-18T09:17:44.223+05:30  INFO 21732 --- [tourroadmap] [main] c.t.tourroadmap.Connection.DBConnection  : Connected to PostgreSQL database username :postgres ==>> checked by connection service
+2024-06-18T09:17:44.226+05:30  INFO 21732 --- [tourroadmap] [main] c.t.t.C.KafkaProducerConnection          : !!!!!!!!!!  Kafka producer started...
+2024-06-18T09:17:44.277+05:30  INFO 21732 --- [tourroadmap] [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-06-18T09:17:44.435+05:30  INFO 21732 --- [tourroadmap] [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-06-18T09:17:44.501+05:30  INFO 21732 --- [tourroadmap] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-06-18T09:17:44.502+05:30  INFO 21732 --- [tourroadmap] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-06-18T09:17:44.502+05:30  INFO 21732 --- [tourroadmap] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1718682464499
+2024-06-18T09:17:45.233+05:30  INFO 21732 --- [tourroadmap] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: YeWbC3sNTgufM5uKirf0OA
+2024-06-18T09:17:45.235+05:30  INFO 21732 --- [tourroadmap] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 125001 with epoch 0
+2024-06-18T09:17:45.532+05:30  INFO 21732 --- [tourroadmap] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path ''
+2024-06-18T09:17:45.545+05:30  INFO 21732 --- [tourroadmap] [main] c.t.tourroadmap.TourroadmapApplication   : Started TourroadmapApplication in 6.058 seconds (process running for 7.006)
