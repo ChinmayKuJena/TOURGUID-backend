@@ -259,3 +259,14 @@
   "stateid" : "OD",
   "placeName" : "Rairangpur"
 }
+2024-06-18T09:22:35.966+05:30  INFO 21732 --- [tourroadmap] [http-nio-3030-exec-7] c.t.tourroadmap.Controller.GetEndpoints  : Respond ok!!!Rairangpur
+2024-06-18T09:22:35.971+05:30  INFO 21732 --- [tourroadmap] [http-nio-3030-exec-7] c.t.tourroadmap.DBservice.DbService      : Connextion ok
+2024-06-18T09:22:35.972+05:30  INFO 21732 --- [tourroadmap] [http-nio-3030-exec-7] c.t.t.C.KafkaProducerConnection          : ***********  kafka producer ok not null
+2024-06-18T09:22:35.974+05:30  INFO 21732 --- [tourroadmap] [http-nio-3030-exec-7] c.t.t.C.KafkaProducerConnection          : Producing Kafka message to topic 'abc': {
+  "placedetails" : "A beautiful city",
+  "searchId" : "TRV_EXP_SR_ID-84f244c4-ce3d-4838-9a26-e25568594a8b",
+  "state" : "Odisha",
+  "placeId" : "92",
+  "stateid" : "OD",
+  "placeName" : "Rairangpur"
+}

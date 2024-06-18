@@ -37,6 +37,7 @@ public class DbService {
             UUID uuid = UUID.randomUUID();
             String PREFIX = "TRV_EXP_SR_ID";
             String searchId = PREFIX + "-" + uuid.toString();
+            System.out.println(searchId);
             // placedetails(rs, placeList, UUID.randomUUID().toString());
             placedetails(rs, placeList, searchId);
             // log.info(placeList.toString());
