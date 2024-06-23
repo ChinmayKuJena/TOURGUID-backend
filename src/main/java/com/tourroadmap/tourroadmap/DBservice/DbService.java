@@ -72,6 +72,9 @@ public class DbService {
                 String timeStamp = new SimpleDateFormat("***yyyy**MM**dd**-HH**mm**ss***").format(new Date());
 
                 String searchId = PREFIX + " - " + uuid1.toString() + " - " + timeStamp;
+
+                System.out.println(list2);
+                log.info(searchId);
                 // kafkaProducerService.placeSearchData(rs, searchId);
 
             } catch (Exception e) {
