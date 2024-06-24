@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 
 import com.tourroadmap.tourroadmap.Config.DBConfig;
 
+import jakarta.annotation.PreDestroy;
+
 // import jakarta.annotation.PostConstruct;
 
 @Component
@@ -33,6 +35,20 @@ public class DBConnection {
             log.error("Failed to connect to PostgreSQL database: " +
                     e.getMessage());
             return connection;
+        }
+    }
+
+    @PreDestroy
+    public void closeConnection() {
+        if (connection != null) {
+            try {
+                connection.close();
+                log.info("Connection to PostgreSQL database closed.");
+            } catch (SQLException e) {
+                log.info("Failed to close connection: " + e.getMessage());
+            }
+        } else {
+            log.info("Connection is already closed.");
         }
     }
 }
