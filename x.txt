@@ -46,10 +46,13 @@ docker rmi IMAGE_ID_OR_NAME
 
 ################################################### KAFKA COMMAND #################################################################
 
+*zookeeper
 .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
 
+*kafka
 .\bin\windows\kafka-server-start.bat .\config\server.properties
 
+*produce topic
 bin\windows\kafka-console-producer.bat --topic abc --bootstrap-server localhost:9092 
 
 ###################################################################################################################################
