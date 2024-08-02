@@ -26,7 +26,9 @@ public class GetEndpoints {
     private ArrayList<PlaceEntity> getPlaceDetailsByName(@PathVariable("placeName") String placeName) {
         try {
             log.info("Respond ok!!!" + placeName);
-            return dbService.placeService(placeName);
+            String pname = placeName.toLowerCase();
+            return dbService.placeService(pname);
+            // return dbService.placeService(placeName);
         } catch (Exception e) {
             log.error("error", e);
             return null;

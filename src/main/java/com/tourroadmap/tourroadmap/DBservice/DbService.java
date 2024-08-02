@@ -36,9 +36,7 @@ public class DbService {
                 log.info("Connection null");
 
             }
-
             placedetails(rs, placeList);
-            // log.info(placeList.toString());
             return placeList;
         } catch (SQLException ex) {
             log.error("eroor" + ex.getMessage());
@@ -57,9 +55,7 @@ public class DbService {
                         rs.getString("placename"),
                         rs.getString("placedetails"),
                         rs.getString("state")));
-                // log.info(rs.toString());
-                // uuid
-                // log.info(rs.getString("placeid"));
+
                 UUID uuid1 = UUID.randomUUID();
                 String PREFIX = "TRV_EXP_SR_ID";
                 String timeStamp = new SimpleDateFormat("***yyyy**MM**dd**-HH**mm**ss***").format(new Date());

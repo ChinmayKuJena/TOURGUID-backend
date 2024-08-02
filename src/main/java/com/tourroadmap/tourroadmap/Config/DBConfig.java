@@ -32,12 +32,17 @@ public class DBConfig {
     @PostConstruct
     public void init() {
         try {
-
             DB_URL = this.dbUrl;
             DB_USERNAME = this.dbUsername;
             DB_PASSWORD = this.dbPassword;
+
+            // Proper logging with placeholders
+            log.info("Database URL: {}", DB_URL);
+            log.info("Database Username: {}", DB_USERNAME);
+            log.info("Database Password: {}", DB_PASSWORD);
         } catch (Exception e) {
-            log.error("error", e);
+            log.error("Error initializing DBConfig", e);
         }
     }
+
 }
