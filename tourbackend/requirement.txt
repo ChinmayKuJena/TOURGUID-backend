@@ -1,0 +1,58 @@
+############################################### GIT-STEPS #########################################################################
+
+cd /path/to/your/folder
+git init
+git add .
+git commit -m "Add folder to main branch"(git remote add origin https://github.com/ChinmayKuJena/TOURGUID-backend.git)
+git remote add origin <repository-url>
+git push -u origin main
+
+##################################################################################################################################
+############################################### RUNNING COMMAND ##################################################################
+
+gradle build -Pprofile=config &&  java -jar .\build\libs\tourroadmap-0.0.1-SNAPSHOT.jar
+
+##################################################################################################################################
+
+############################################### DOCKER COMMANDS ##################################################################
+
+*build all dependencies
+./gradlew build or gradle build -Pprofile=config
+
+*build docker image
+docker build -t tourapp 
+
+*run docker container (with image name and port number)
+docker run --name tourapp -p 3030:3030 -d tourapp
+
+*Check running containers:
+docker ps -a                    
+
+*Check running containers logs:
+docker logs tourapp
+
+*Stop a container:
+docker stop tourroadmap(CONTAINER_ID_OR_NAME)
+
+*Remove a container:
+docker rm tourroadma
+
+*List Docker images:
+docker images
+
+*Remove an image:
+docker rmi IMAGE_ID_OR_NAME
+###################################################################################################################################
+
+################################################### KAFKA COMMAND #################################################################
+
+*zookeeper
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+*kafka
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+*produce topic
+bin\windows\kafka-console-producer.bat --topic abc --bootstrap-server localhost:9092 
+
+###################################################################################################################################

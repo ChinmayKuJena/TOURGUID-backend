@@ -1,0 +1,1108 @@
+2024-09-17T11:13:13.825+05:30  INFO 23080 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : Starting TourbackendApplication v0.0.1-SNAPSHOT using Java 17.0.11 with PID 23080 (C:\ALL_PROJECTS\personal\tourbackend\tourbackend\build\libs\tourbackend-0.0.1-SNAPSHOT.jar started by chinm in C:\ALL_PROJECTS\personal\tourbackend\tourbackend)
+2024-09-17T11:13:13.831+05:30  INFO 23080 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : The following 1 profile is active: "config"
+2024-09-17T11:13:16.725+05:30  INFO 23080 --- [tourbackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2024-09-17T11:13:16.753+05:30  INFO 23080 --- [tourbackend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-17T11:13:16.754+05:30  INFO 23080 --- [tourbackend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-17T11:13:16.848+05:30  INFO 23080 --- [tourbackend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-17T11:13:16.849+05:30  INFO 23080 --- [tourbackend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2883 ms
+2024-09-17T11:13:16.962+05:30  INFO 23080 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database URL: jdbc:postgresql://localhost:5432/postgres
+2024-09-17T11:13:16.966+05:30  INFO 23080 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database Username: postgres
+2024-09-17T11:13:16.967+05:30  INFO 23080 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database Password: chinmay09
+2024-09-17T11:13:16.974+05:30  INFO 23080 --- [tourbackend] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.tourbackend.tourbackend.Connection.DBConnection.getConnection()
+2024-09-17T11:13:17.251+05:30  INFO 23080 --- [tourbackend] [main] c.t.tourbackend.Connection.DBConnection  : Connected to PostgreSQL database username :postgres ==>> checked by connection service
+2024-09-17T11:13:17.252+05:30  INFO 23080 --- [tourbackend] [main] c.t.t.C.KafkaProducerConnection          : !!!!!!!!!! Kafka producer started...
+2024-09-17T11:13:17.329+05:30  INFO 23080 --- [tourbackend] [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-09-17T11:13:17.495+05:30  INFO 23080 --- [tourbackend] [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-09-17T11:13:17.595+05:30  INFO 23080 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-09-17T11:13:17.596+05:30  INFO 23080 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-09-17T11:13:17.596+05:30  INFO 23080 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1726551797593
+2024-09-17T11:13:18.129+05:30  INFO 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-09-17T11:13:18.132+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-09-17T11:13:18.134+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-09-17T11:13:18.245+05:30  INFO 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-09-17T11:13:18.247+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-09-17T11:13:18.248+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-09-17T11:13:18.419+05:30  INFO 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-09-17T11:13:18.422+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-09-17T11:13:18.424+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-09-17T11:13:18.605+05:30  INFO 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-09-17T11:13:18.608+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-09-17T11:13:18.609+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-09-17T11:13:18.612+05:30  INFO 23080 --- [tourbackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path '/'
+2024-09-17T11:13:18.634+05:30  INFO 23080 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : Started TourbackendApplication in 5.756 seconds (process running for 6.592)
+2024-09-17T11:13:19.092+05:30  INFO 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-09-17T11:13:19.093+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-09-17T11:13:19.094+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-09-17T11:13:20.076+05:30  INFO 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-09-17T11:13:20.077+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-09-17T11:13:20.078+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-09-17T11:13:21.182+05:30  INFO 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-09-17T11:13:21.184+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-09-17T11:13:21.185+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-09-17T11:13:22.166+05:30  INFO 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-09-17T11:13:22.168+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-09-17T11:13:22.169+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-09-17T11:13:23.089+05:30  INFO 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-09-17T11:13:23.090+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2024-09-17T11:13:23.091+05:30  WARN 23080 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2024-09-17T11:13:23.229+05:30  INFO 23080 --- [tourbackend] [SpringApplicationShutdownHook] c.t.t.C.KafkaProducerConnection          : Closing Kafka producer...
+2024-09-17T11:13:23.230+05:30  INFO 23080 --- [tourbackend] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2024-09-17T11:13:23.233+05:30  INFO 23080 --- [tourbackend] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-09-17T11:13:23.234+05:30  INFO 23080 --- [tourbackend] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-09-17T11:13:23.235+05:30  INFO 23080 --- [tourbackend] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-09-17T11:13:23.235+05:30  INFO 23080 --- [tourbackend] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2024-09-17T11:13:23.237+05:30  INFO 23080 --- [tourbackend] [SpringApplicationShutdownHook] c.t.tourbackend.Connection.DBConnection  : Connection to PostgreSQL database closed.
+2024-09-17T11:15:28.138+05:30  INFO 2712 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : Starting TourbackendApplication v0.0.1-SNAPSHOT using Java 17.0.11 with PID 2712 (C:\ALL_PROJECTS\personal\tourbackend\tourbackend\build\libs\tourbackend-0.0.1-SNAPSHOT.jar started by chinm in C:\ALL_PROJECTS\personal\tourbackend\tourbackend)
+2024-09-17T11:15:28.142+05:30  INFO 2712 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : The following 1 profile is active: "config"
+2024-09-17T11:15:30.942+05:30  INFO 2712 --- [tourbackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2024-09-17T11:15:30.967+05:30  INFO 2712 --- [tourbackend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-17T11:15:30.968+05:30  INFO 2712 --- [tourbackend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-17T11:15:31.079+05:30  INFO 2712 --- [tourbackend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-17T11:15:31.081+05:30  INFO 2712 --- [tourbackend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2829 ms
+2024-09-17T11:15:31.217+05:30  INFO 2712 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database URL: jdbc:postgresql://localhost:5432/postgres
+2024-09-17T11:15:31.222+05:30  INFO 2712 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database Username: postgres
+2024-09-17T11:15:31.223+05:30  INFO 2712 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database Password: chinmay09
+2024-09-17T11:15:31.231+05:30  INFO 2712 --- [tourbackend] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.tourbackend.tourbackend.Connection.DBConnection.getConnection()
+2024-09-17T11:15:31.808+05:30  INFO 2712 --- [tourbackend] [main] c.t.tourbackend.Connection.DBConnection  : Connected to PostgreSQL database username :postgres ==>> checked by connection service
+2024-09-17T11:15:31.816+05:30  INFO 2712 --- [tourbackend] [main] c.t.t.C.KafkaProducerConnection          : !!!!!!!!!! Kafka producer started...
+2024-09-17T11:15:31.955+05:30  INFO 2712 --- [tourbackend] [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-09-17T11:15:32.234+05:30  INFO 2712 --- [tourbackend] [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-09-17T11:15:32.358+05:30  INFO 2712 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-09-17T11:15:32.359+05:30  INFO 2712 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-09-17T11:15:32.361+05:30  INFO 2712 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1726551932355
+2024-09-17T11:15:33.341+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: YeWbC3sNTgufM5uKirf0OA
+2024-09-17T11:15:33.480+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 156000 with epoch 0
+2024-09-17T11:15:33.664+05:30  INFO 2712 --- [tourbackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path '/'
+2024-09-17T11:15:33.684+05:30  INFO 2712 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : Started TourbackendApplication in 6.609 seconds (process running for 7.654)
+2024-09-17T11:15:42.403+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-09-17T11:15:42.410+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-09-17T11:15:42.412+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Cancelled in-flight METADATA request with correlation id 5 due to node 0 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, request timeout: 30000ms)
+2024-09-17T11:15:44.559+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-09-17T11:15:44.560+05:30  WARN 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09/192.168.18.46:9092) could not be established. Broker may not be available.
+2024-09-17T11:15:46.711+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-09-17T11:15:46.712+05:30  WARN 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09/172.31.48.1:9092) could not be established. Broker may not be available.
+2024-09-17T11:15:48.989+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-09-17T11:15:48.991+05:30  WARN 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09/192.168.18.46:9092) could not be established. Broker may not be available.
+2024-09-17T11:15:51.514+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-09-17T11:15:51.516+05:30  WARN 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09/172.31.48.1:9092) could not be established. Broker may not be available.
+2024-09-17T11:15:54.225+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-09-17T11:15:54.226+05:30  WARN 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09/192.168.18.46:9092) could not be established. Broker may not be available.
+2024-09-17T11:15:57.139+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-09-17T11:15:57.140+05:30  WARN 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09/172.31.48.1:9092) could not be established. Broker may not be available.
+2024-09-17T11:16:00.109+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-09-17T11:16:00.111+05:30  WARN 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09/192.168.18.46:9092) could not be established. Broker may not be available.
+2024-09-17T11:16:03.310+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-09-17T11:16:03.312+05:30  WARN 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09/172.31.48.1:9092) could not be established. Broker may not be available.
+2024-09-17T11:16:06.335+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-09-17T11:16:06.336+05:30  WARN 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09/192.168.18.46:9092) could not be established. Broker may not be available.
+2024-09-17T11:16:09.446+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-09-17T11:16:09.448+05:30  WARN 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09/172.31.48.1:9092) could not be established. Broker may not be available.
+2024-09-17T11:16:12.365+05:30  INFO 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 0 disconnected.
+2024-09-17T11:16:12.367+05:30  WARN 2712 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node 0 (CHINMAY09/192.168.18.46:9092) could not be established. Broker may not be available.
+2024-09-17T11:16:13.931+05:30  INFO 2712 --- [tourbackend] [SpringApplicationShutdownHook] c.t.t.C.KafkaProducerConnection          : Closing Kafka producer...
+2024-09-17T11:16:13.933+05:30  INFO 2712 --- [tourbackend] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2024-09-17T11:16:13.942+05:30  INFO 2712 --- [tourbackend] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-09-17T11:16:13.944+05:30  INFO 2712 --- [tourbackend] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-09-17T11:16:13.944+05:30  INFO 2712 --- [tourbackend] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-09-17T11:16:13.946+05:30  INFO 2712 --- [tourbackend] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2024-09-17T11:16:13.947+05:30  INFO 2712 --- [tourbackend] [SpringApplicationShutdownHook] c.t.tourbackend.Connection.DBConnection  : Connection to PostgreSQL database closed.
+2024-09-17T11:17:16.408+05:30  INFO 4640 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : Starting TourbackendApplication v0.0.1-SNAPSHOT using Java 17.0.11 with PID 4640 (C:\ALL_PROJECTS\personal\tourbackend\tourbackend\build\libs\tourbackend-0.0.1-SNAPSHOT.jar started by chinm in C:\ALL_PROJECTS\personal\tourbackend\tourbackend)
+2024-09-17T11:17:16.414+05:30  INFO 4640 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : The following 1 profile is active: "config"
+2024-09-17T11:17:18.764+05:30  INFO 4640 --- [tourbackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2024-09-17T11:17:18.786+05:30  INFO 4640 --- [tourbackend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-17T11:17:18.786+05:30  INFO 4640 --- [tourbackend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-17T11:17:18.861+05:30  INFO 4640 --- [tourbackend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-17T11:17:18.862+05:30  INFO 4640 --- [tourbackend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2370 ms
+2024-09-17T11:17:18.974+05:30  INFO 4640 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database URL: jdbc:postgresql://localhost:5432/postgres
+2024-09-17T11:17:18.979+05:30  INFO 4640 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database Username: postgres
+2024-09-17T11:17:18.979+05:30  INFO 4640 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database Password: chinmay09
+2024-09-17T11:17:18.985+05:30  INFO 4640 --- [tourbackend] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.tourbackend.tourbackend.Connection.DBConnection.getConnection()
+2024-09-17T11:17:19.256+05:30  INFO 4640 --- [tourbackend] [main] c.t.tourbackend.Connection.DBConnection  : Connected to PostgreSQL database username :postgres ==>> checked by connection service
+2024-09-17T11:17:19.258+05:30  INFO 4640 --- [tourbackend] [main] c.t.t.C.KafkaProducerConnection          : !!!!!!!!!! Kafka producer started...
+2024-09-17T11:17:19.316+05:30  INFO 4640 --- [tourbackend] [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-09-17T11:17:19.460+05:30  INFO 4640 --- [tourbackend] [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-09-17T11:17:19.527+05:30  INFO 4640 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-09-17T11:17:19.528+05:30  INFO 4640 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-09-17T11:17:19.529+05:30  INFO 4640 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1726552039523
+2024-09-17T11:17:20.286+05:30  INFO 4640 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: YeWbC3sNTgufM5uKirf0OA
+2024-09-17T11:17:20.411+05:30  INFO 4640 --- [tourbackend] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 157000 with epoch 0
+2024-09-17T11:17:20.497+05:30  INFO 4640 --- [tourbackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path '/'
+2024-09-17T11:17:20.514+05:30  INFO 4640 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : Started TourbackendApplication in 4.731 seconds (process running for 5.467)
+2024-09-17T11:18:01.615+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-17T11:18:01.617+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-17T11:18:01.625+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2024-09-17T11:18:01.803+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-1] c.t.tourbackend.Controller.GetEndpoints  : Respond ok!!!Balasore
+2024-09-17T11:18:01.950+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-1] c.t.tourbackend.DBservice.DbService      : Connextion ok
+2024-09-17T11:18:01.957+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-1] c.t.tourbackend.DBservice.DbService      : TRV_EXP_SR_ID - 4ff872c0-7b45-4b83-ba46-6d1254a71abf - ***2024**09**17**-11**18**01***
+2024-09-17T11:18:02.015+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-1] c.t.t.C.KafkaProducerConnection          : *********** kafka producer ok not null
+2024-09-17T11:18:02.016+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-1] c.t.t.C.KafkaProducerConnection          : Producing Kafka message to topic 'abc': {
+  "placedetails" : "Balasore is a city in Odisha known for its rich cultural heritage and history.",
+  "searchId" : "TRV_EXP_SR_ID - 4ff872c0-7b45-4b83-ba46-6d1254a71abf - ***2024**09**17**-11**18**01***",
+  "state" : "Odisha",
+  "placeId" : "94",
+  "stateid" : "OD",
+  "placeName" : "balasore"
+}
+2024-09-17T11:23:45.294+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-8] c.t.tourbackend.Controller.GetEndpoints  : Respond ok!!!Balasore
+2024-09-17T11:23:45.357+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-8] c.t.tourbackend.DBservice.DbService      : Connextion ok
+2024-09-17T11:23:45.363+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-8] c.t.tourbackend.DBservice.DbService      : TRV_EXP_SR_ID - f979e9cc-1bc1-4e02-8919-a7cbf676ec67 - ***2024**09**17**-11**23**45***
+2024-09-17T11:23:45.378+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-8] c.t.t.C.KafkaProducerConnection          : *********** kafka producer ok not null
+2024-09-17T11:23:45.379+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-8] c.t.t.C.KafkaProducerConnection          : Producing Kafka message to topic 'abc': {
+  "placedetails" : "Balasore is a city in Odisha known for its rich cultural heritage and history.",
+  "searchId" : "TRV_EXP_SR_ID - f979e9cc-1bc1-4e02-8919-a7cbf676ec67 - ***2024**09**17**-11**23**45***",
+  "state" : "Odisha",
+  "placeId" : "94",
+  "stateid" : "OD",
+  "placeName" : "balasore"
+}
+2024-09-17T11:25:08.604+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-1] c.t.tourbackend.Controller.GetEndpoints  : Respond ok!!!Balasore
+2024-09-17T11:25:08.607+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-1] c.t.tourbackend.DBservice.DbService      : Connextion ok
+2024-09-17T11:25:08.608+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-1] c.t.tourbackend.DBservice.DbService      : TRV_EXP_SR_ID - b4fd73c2-a43c-4d23-aeda-a4985280194b - ***2024**09**17**-11**25**08***
+2024-09-17T11:25:08.609+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-1] c.t.t.C.KafkaProducerConnection          : *********** kafka producer ok not null
+2024-09-17T11:25:08.611+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-1] c.t.t.C.KafkaProducerConnection          : Producing Kafka message to topic 'abc': {
+  "placedetails" : "Balasore is a city in Odisha known for its rich cultural heritage and history.",
+  "searchId" : "TRV_EXP_SR_ID - b4fd73c2-a43c-4d23-aeda-a4985280194b - ***2024**09**17**-11**25**08***",
+  "state" : "Odisha",
+  "placeId" : "94",
+  "stateid" : "OD",
+  "placeName" : "balasore"
+}
+2024-09-17T11:26:38.759+05:30  INFO 4640 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2024-09-17T11:26:43.932+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-4] c.t.tourbackend.Controller.GetEndpoints  : Respond ok!!!Balasore
+2024-09-17T11:26:43.945+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-4] c.t.tourbackend.DBservice.DbService      : Connextion ok
+2024-09-17T11:26:43.947+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-4] c.t.tourbackend.DBservice.DbService      : TRV_EXP_SR_ID - 5bcced2b-7698-47ac-96ad-eb9545839329 - ***2024**09**17**-11**26**43***
+2024-09-17T11:26:43.951+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-4] c.t.t.C.KafkaProducerConnection          : *********** kafka producer ok not null
+2024-09-17T11:26:43.954+05:30  INFO 4640 --- [tourbackend] [http-nio-3030-exec-4] c.t.t.C.KafkaProducerConnection          : Producing Kafka message to topic 'abc': {
+  "placedetails" : "Balasore is a city in Odisha known for its rich cultural heritage and history.",
+  "searchId" : "TRV_EXP_SR_ID - 5bcced2b-7698-47ac-96ad-eb9545839329 - ***2024**09**17**-11**26**43***",
+  "state" : "Odisha",
+  "placeId" : "94",
+  "stateid" : "OD",
+  "placeName" : "balasore"
+}
+2024-09-17T11:27:31.283+05:30  INFO 4640 --- [tourbackend] [SpringApplicationShutdownHook] c.t.t.C.KafkaProducerConnection          : Closing Kafka producer...
+2024-09-17T11:27:31.288+05:30  INFO 4640 --- [tourbackend] [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2024-09-17T11:27:31.339+05:30  INFO 4640 --- [tourbackend] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-09-17T11:27:31.340+05:30  INFO 4640 --- [tourbackend] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-09-17T11:27:31.343+05:30  INFO 4640 --- [tourbackend] [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-09-17T11:27:31.352+05:30  INFO 4640 --- [tourbackend] [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2024-09-17T11:27:31.357+05:30  INFO 4640 --- [tourbackend] [SpringApplicationShutdownHook] c.t.tourbackend.Connection.DBConnection  : Connection to PostgreSQL database closed.
+2024-09-17T11:43:30.372+05:30  INFO 29296 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : Starting TourbackendApplication using Java 17.0.11 with PID 29296 (C:\ALL_PROJECTS\personal\tourbackend\tourbackend\build\classes\java\main started by chinm in C:\ALL_PROJECTS\personal\tourbackend\tourbackend)
+2024-09-17T11:43:30.374+05:30  INFO 29296 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : The following 1 profile is active: "config"
+2024-09-17T11:43:32.012+05:30  INFO 29296 --- [tourbackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2024-09-17T11:43:32.028+05:30  INFO 29296 --- [tourbackend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-17T11:43:32.028+05:30  INFO 29296 --- [tourbackend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-17T11:43:32.100+05:30  INFO 29296 --- [tourbackend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-17T11:43:32.101+05:30  INFO 29296 --- [tourbackend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1674 ms
+2024-09-17T11:43:32.171+05:30  INFO 29296 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database URL: jdbc:postgresql://localhost:5432/postgres
+2024-09-17T11:43:32.172+05:30  INFO 29296 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database Username: postgres
+2024-09-17T11:43:32.173+05:30  INFO 29296 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database Password: chinmay09
+2024-09-17T11:43:32.175+05:30  INFO 29296 --- [tourbackend] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.tourbackend.tourbackend.Connection.DBConnection.getConnection()
+2024-09-17T11:43:32.368+05:30  INFO 29296 --- [tourbackend] [main] c.t.tourbackend.Connection.DBConnection  : Connected to PostgreSQL database username :postgres ==>> checked by connection service
+2024-09-17T11:43:32.368+05:30  INFO 29296 --- [tourbackend] [main] c.t.t.C.KafkaProducerConnection          : !!!!!!!!!! Kafka producer started...
+2024-09-17T11:43:32.414+05:30  INFO 29296 --- [tourbackend] [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-09-17T11:43:32.524+05:30  INFO 29296 --- [tourbackend] [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-09-17T11:43:32.591+05:30  INFO 29296 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-09-17T11:43:32.591+05:30  INFO 29296 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-09-17T11:43:32.591+05:30  INFO 29296 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1726553612589
+2024-09-17T11:43:33.293+05:30  INFO 29296 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: YeWbC3sNTgufM5uKirf0OA
+2024-09-17T11:43:33.299+05:30  INFO 29296 --- [tourbackend] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 157001 with epoch 0
+2024-09-17T11:43:33.407+05:30  INFO 29296 --- [tourbackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path '/'
+2024-09-17T11:43:33.418+05:30  INFO 29296 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : Started TourbackendApplication in 3.872 seconds (process running for 4.56)
+2024-09-17T11:43:38.236+05:30  INFO 29296 --- [tourbackend] [http-nio-3030-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-17T11:43:38.237+05:30  INFO 29296 --- [tourbackend] [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-17T11:43:38.239+05:30  INFO 29296 --- [tourbackend] [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-17T11:43:38.282+05:30  INFO 29296 --- [tourbackend] [http-nio-3030-exec-1] c.t.tourbackend.Controller.GetEndpoints  : Respond ok!!!Balasore
+2024-09-17T11:43:38.326+05:30  INFO 29296 --- [tourbackend] [http-nio-3030-exec-1] c.t.tourbackend.DBservice.DbService      : Connextion ok
+2024-09-17T11:43:38.328+05:30  INFO 29296 --- [tourbackend] [http-nio-3030-exec-1] c.t.tourbackend.DBservice.DbService      : TRV_EXP_SR_ID - 6f02aabc-6db0-4415-bf90-d5ffb29cf386 - ***2024**09**17**-11**43**38***
+2024-09-17T11:43:38.345+05:30  INFO 29296 --- [tourbackend] [http-nio-3030-exec-1] c.t.t.C.KafkaProducerConnection          : *********** kafka producer ok not null
+2024-09-17T11:43:38.345+05:30  INFO 29296 --- [tourbackend] [http-nio-3030-exec-1] c.t.t.C.KafkaProducerConnection          : Producing Kafka message to topic 'abc': {
+  "placedetails" : "Balasore is a city in Odisha known for its rich cultural heritage and history.",
+  "searchId" : "TRV_EXP_SR_ID - 6f02aabc-6db0-4415-bf90-d5ffb29cf386 - ***2024**09**17**-11**43**38***",
+  "state" : "Odisha",
+  "placeId" : "94",
+  "stateid" : "OD",
+  "placeName" : "balasore"
+}
+2024-09-17T11:44:47.898+05:30 ERROR 29296 --- [tourbackend] [http-nio-3030-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.List (java.lang.String and java.util.List are in module java.base of loader 'bootstrap')] with root cause
+
+java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.List (java.lang.String and java.util.List are in module java.base of loader 'bootstrap')
+	at com.tourbackend.tourbackend.DataSetService.NominatimService.processPlace(NominatimService.java:37) ~[main/:na]
+	at com.tourbackend.tourbackend.Controller.GetEndpoints.searchPlace(GetEndpoints.java:49) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2024-09-17T11:45:22.970+05:30 ERROR 29296 --- [tourbackend] [http-nio-3030-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.List (java.lang.String and java.util.List are in module java.base of loader 'bootstrap')] with root cause
+
+java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.List (java.lang.String and java.util.List are in module java.base of loader 'bootstrap')
+	at com.tourbackend.tourbackend.DataSetService.NominatimService.processPlace(NominatimService.java:37) ~[main/:na]
+	at com.tourbackend.tourbackend.Controller.GetEndpoints.searchPlace(GetEndpoints.java:49) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2024-09-17T11:46:45.717+05:30  INFO 26564 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : Starting TourbackendApplication using Java 17.0.11 with PID 26564 (C:\ALL_PROJECTS\personal\tourbackend\tourbackend\build\classes\java\main started by chinm in C:\ALL_PROJECTS\personal\tourbackend\tourbackend)
+2024-09-17T11:46:45.718+05:30  INFO 26564 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : The following 1 profile is active: "config"
+2024-09-17T11:46:47.207+05:30  INFO 26564 --- [tourbackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2024-09-17T11:46:47.231+05:30  INFO 26564 --- [tourbackend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-17T11:46:47.231+05:30  INFO 26564 --- [tourbackend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-17T11:46:47.355+05:30  INFO 26564 --- [tourbackend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-17T11:46:47.356+05:30  INFO 26564 --- [tourbackend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1575 ms
+2024-09-17T11:46:47.433+05:30  INFO 26564 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database URL: jdbc:postgresql://localhost:5432/postgres
+2024-09-17T11:46:47.434+05:30  INFO 26564 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database Username: postgres
+2024-09-17T11:46:47.434+05:30  INFO 26564 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database Password: chinmay09
+2024-09-17T11:46:47.437+05:30  INFO 26564 --- [tourbackend] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.tourbackend.tourbackend.Connection.DBConnection.getConnection()
+2024-09-17T11:46:47.714+05:30  INFO 26564 --- [tourbackend] [main] c.t.tourbackend.Connection.DBConnection  : Connected to PostgreSQL database username :postgres ==>> checked by connection service
+2024-09-17T11:46:47.715+05:30  INFO 26564 --- [tourbackend] [main] c.t.t.C.KafkaProducerConnection          : !!!!!!!!!! Kafka producer started...
+2024-09-17T11:46:47.805+05:30  INFO 26564 --- [tourbackend] [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-09-17T11:46:47.960+05:30  INFO 26564 --- [tourbackend] [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-09-17T11:46:48.049+05:30  INFO 26564 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-09-17T11:46:48.050+05:30  INFO 26564 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-09-17T11:46:48.050+05:30  INFO 26564 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1726553808047
+2024-09-17T11:46:48.624+05:30  INFO 26564 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: YeWbC3sNTgufM5uKirf0OA
+2024-09-17T11:46:48.625+05:30  INFO 26564 --- [tourbackend] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 157002 with epoch 0
+2024-09-17T11:46:48.667+05:30  INFO 26564 --- [tourbackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path '/'
+2024-09-17T11:46:48.675+05:30  INFO 26564 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : Started TourbackendApplication in 3.479 seconds (process running for 4.027)
+2024-09-17T11:47:01.407+05:30  INFO 26564 --- [tourbackend] [http-nio-3030-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-17T11:47:01.407+05:30  INFO 26564 --- [tourbackend] [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-17T11:47:01.409+05:30  INFO 26564 --- [tourbackend] [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-17T11:47:02.517+05:30 ERROR 26564 --- [tourbackend] [http-nio-3030-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.List (java.lang.String and java.util.List are in module java.base of loader 'bootstrap')] with root cause
+
+java.lang.ClassCastException: class java.lang.String cannot be cast to class java.util.List (java.lang.String and java.util.List are in module java.base of loader 'bootstrap')
+	at com.tourbackend.tourbackend.DataSetService.NominatimService.processPlace(NominatimService.java:37) ~[main/:na]
+	at com.tourbackend.tourbackend.Controller.GetEndpoints.searchPlace(GetEndpoints.java:49) ~[main/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.12.jar:6.1.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.28.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.12.jar:6.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2024-09-17T11:48:00.176+05:30  INFO 2436 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : Starting TourbackendApplication using Java 17.0.11 with PID 2436 (C:\ALL_PROJECTS\personal\tourbackend\tourbackend\build\classes\java\main started by chinm in C:\ALL_PROJECTS\personal\tourbackend\tourbackend)
+2024-09-17T11:48:00.179+05:30  INFO 2436 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : The following 1 profile is active: "config"
+2024-09-17T11:48:01.390+05:30  INFO 2436 --- [tourbackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2024-09-17T11:48:01.409+05:30  INFO 2436 --- [tourbackend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-17T11:48:01.410+05:30  INFO 2436 --- [tourbackend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-17T11:48:01.499+05:30  INFO 2436 --- [tourbackend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-17T11:48:01.500+05:30  INFO 2436 --- [tourbackend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1259 ms
+2024-09-17T11:48:01.603+05:30  INFO 2436 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database URL: jdbc:postgresql://localhost:5432/postgres
+2024-09-17T11:48:01.606+05:30  INFO 2436 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database Username: postgres
+2024-09-17T11:48:01.606+05:30  INFO 2436 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database Password: chinmay09
+2024-09-17T11:48:01.607+05:30  INFO 2436 --- [tourbackend] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.tourbackend.tourbackend.Connection.DBConnection.getConnection()
+2024-09-17T11:48:01.795+05:30  INFO 2436 --- [tourbackend] [main] c.t.tourbackend.Connection.DBConnection  : Connected to PostgreSQL database username :postgres ==>> checked by connection service
+2024-09-17T11:48:01.796+05:30  INFO 2436 --- [tourbackend] [main] c.t.t.C.KafkaProducerConnection          : !!!!!!!!!! Kafka producer started...
+2024-09-17T11:48:01.827+05:30  INFO 2436 --- [tourbackend] [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-09-17T11:48:01.914+05:30  INFO 2436 --- [tourbackend] [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-09-17T11:48:01.961+05:30  INFO 2436 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-09-17T11:48:01.961+05:30  INFO 2436 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-09-17T11:48:01.962+05:30  INFO 2436 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1726553881959
+2024-09-17T11:48:02.490+05:30  INFO 2436 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: YeWbC3sNTgufM5uKirf0OA
+2024-09-17T11:48:02.492+05:30  INFO 2436 --- [tourbackend] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 157003 with epoch 0
+2024-09-17T11:48:02.522+05:30  INFO 2436 --- [tourbackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path '/'
+2024-09-17T11:48:02.529+05:30  INFO 2436 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : Started TourbackendApplication in 2.899 seconds (process running for 3.23)
+2024-09-17T11:48:07.536+05:30  INFO 2436 --- [tourbackend] [http-nio-3030-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-17T11:48:07.537+05:30  INFO 2436 --- [tourbackend] [http-nio-3030-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-17T11:48:07.538+05:30  INFO 2436 --- [tourbackend] [http-nio-3030-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-17T11:48:08.500+05:30  INFO 2436 --- [tourbackend] [http-nio-3030-exec-3] c.t.t.C.KafkaProducerConnection          : *********** kafka producer ok not null
+2024-09-17T11:48:08.500+05:30  INFO 2436 --- [tourbackend] [http-nio-3030-exec-3] c.t.t.C.KafkaProducerConnection          : Producing Kafka message to topic 'abc': ProducerEntity{name='Bhubaneswar, Bhubaneswar Municipal Corporation, Bhubaneswar (M.Corp.), Khordha, Odisha, 751001, India', type='city'}
+2024-09-17T11:48:53.681+05:30  INFO 2436 --- [tourbackend] [http-nio-3030-exec-5] c.t.tourbackend.Controller.GetEndpoints  : Respond ok!!!Balasore
+2024-09-17T11:48:53.718+05:30  INFO 2436 --- [tourbackend] [http-nio-3030-exec-5] c.t.tourbackend.DBservice.DbService      : Connextion ok
+2024-09-17T11:48:53.720+05:30  INFO 2436 --- [tourbackend] [http-nio-3030-exec-5] c.t.tourbackend.DBservice.DbService      : TRV_EXP_SR_ID - 7b77658e-46e4-4acd-b29d-d69fabae6810 - ***2024**09**17**-11**48**53***
+2024-09-17T11:48:53.729+05:30  INFO 2436 --- [tourbackend] [http-nio-3030-exec-5] c.t.t.C.KafkaProducerConnection          : *********** kafka producer ok not null
+2024-09-17T11:48:53.730+05:30  INFO 2436 --- [tourbackend] [http-nio-3030-exec-5] c.t.t.C.KafkaProducerConnection          : Producing Kafka message to topic 'abc': {
+  "placedetails" : "Balasore is a city in Odisha known for its rich cultural heritage and history.",
+  "searchId" : "TRV_EXP_SR_ID - 7b77658e-46e4-4acd-b29d-d69fabae6810 - ***2024**09**17**-11**48**53***",
+  "state" : "Odisha",
+  "placeId" : "94",
+  "stateid" : "OD",
+  "placeName" : "balasore"
+}
+2024-09-17T11:51:41.643+05:30  INFO 2436 --- [tourbackend] [http-nio-3030-exec-7] c.t.t.C.KafkaProducerConnection          : *********** kafka producer ok not null
+2024-09-17T11:51:41.647+05:30  INFO 2436 --- [tourbackend] [http-nio-3030-exec-7] c.t.t.C.KafkaProducerConnection          : Producing Kafka message to topic 'abc': ProducerEntity{name='Bhubaneswar, Bhubaneswar Municipal Corporation, Bhubaneswar (M.Corp.), Khordha, Odisha, 751001, India', type='city'}
+2024-09-17T11:52:21.648+05:30  INFO 26512 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : Starting TourbackendApplication using Java 17.0.11 with PID 26512 (C:\ALL_PROJECTS\personal\tourbackend\tourbackend\build\classes\java\main started by chinm in C:\ALL_PROJECTS\personal\tourbackend\tourbackend)
+2024-09-17T11:52:21.651+05:30  INFO 26512 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : The following 1 profile is active: "config"
+2024-09-17T11:52:23.416+05:30  INFO 26512 --- [tourbackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2024-09-17T11:52:23.436+05:30  INFO 26512 --- [tourbackend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-17T11:52:23.436+05:30  INFO 26512 --- [tourbackend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-17T11:52:23.510+05:30  INFO 26512 --- [tourbackend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-17T11:52:23.510+05:30  INFO 26512 --- [tourbackend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1803 ms
+2024-09-17T11:52:23.604+05:30  INFO 26512 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database URL: jdbc:postgresql://localhost:5432/postgres
+2024-09-17T11:52:23.610+05:30  INFO 26512 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database Username: postgres
+2024-09-17T11:52:23.610+05:30  INFO 26512 --- [tourbackend] [main] c.t.tourbackend.Config.DBConfig          : Database Password: chinmay09
+2024-09-17T11:52:23.620+05:30  INFO 26512 --- [tourbackend] [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public java.sql.Connection com.tourbackend.tourbackend.Connection.DBConnection.getConnection()
+2024-09-17T11:52:23.902+05:30  INFO 26512 --- [tourbackend] [main] c.t.tourbackend.Connection.DBConnection  : Connected to PostgreSQL database username :postgres ==>> checked by connection service
+2024-09-17T11:52:23.903+05:30  INFO 26512 --- [tourbackend] [main] c.t.t.C.KafkaProducerConnection          : !!!!!!!!!! Kafka producer started...
+2024-09-17T11:52:23.996+05:30  INFO 26512 --- [tourbackend] [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-09-17T11:52:24.155+05:30  INFO 26512 --- [tourbackend] [main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-09-17T11:52:24.242+05:30  INFO 26512 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.5.0
+2024-09-17T11:52:24.243+05:30  INFO 26512 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c97b88d5db4de28d
+2024-09-17T11:52:24.243+05:30  INFO 26512 --- [tourbackend] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1726554144240
+2024-09-17T11:52:24.908+05:30  INFO 26512 --- [tourbackend] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: YeWbC3sNTgufM5uKirf0OA
+2024-09-17T11:52:24.911+05:30  INFO 26512 --- [tourbackend] [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 157004 with epoch 0
+2024-09-17T11:52:25.008+05:30  INFO 26512 --- [tourbackend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path '/'
+2024-09-17T11:52:25.033+05:30  INFO 26512 --- [tourbackend] [main] c.t.tourbackend.TourbackendApplication   : Started TourbackendApplication in 3.995 seconds (process running for 4.842)
+2024-09-17T11:52:50.857+05:30  INFO 26512 --- [tourbackend] [http-nio-3030-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-17T11:52:50.858+05:30  INFO 26512 --- [tourbackend] [http-nio-3030-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-17T11:52:50.860+05:30  INFO 26512 --- [tourbackend] [http-nio-3030-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
